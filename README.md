@@ -39,7 +39,7 @@ All the following features are my interpretations of the job requirements listed
 -
 
 # 🗳️ Lessons and Improvements:
--
+- Naturally the previews and data modes are based off my own interpretations of the type of data I will have at my disposal to work off from, further tweaks will be required, and approaches will need to be refined. 
 -
 -
 -
