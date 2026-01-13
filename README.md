@@ -15,11 +15,12 @@ All the following features are my interpretations of the job requirements listed
 
 
 # 🔩 Technologies:
+- Event-level analytics platforms (e.g., Snowplow, GA360/BigQuery, Adobe Analytics)
 - Excel/Sheets
 - SQL
 - Python
 - Power Bi
-- Event-level analytics platforms (e.g., Snowplow, GA360/BigQuery, Adobe Analytics)
+
 
 
 
