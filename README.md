@@ -68,7 +68,7 @@ To create a data model which can audit the data, we require a modeled data set t
 
 <br>
 
-Acheived through SQL logic parameters
+Acheived through SQL logic parameters:
 
 <br>
 
