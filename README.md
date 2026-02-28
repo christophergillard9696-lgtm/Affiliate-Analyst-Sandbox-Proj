@@ -2,7 +2,7 @@
 
 
 # 🔭 Features:
-All the following features are my interpretations of the job requirements listed for a position I have an interview for:
+IThis project sets out to create an ETL and data dashboard that can:
 - Analyse and reconcile affiliate network data against internal metrics to identify tracking discrepancies, revenue leakage, and commission inaccuracies.
 - Conduct performance and commission audits, ensuring correct CPA rates, sub-ID tracking, and overall partner integrity.
 - Build models and insights to uncover revenue opportunities, optimise conversion paths, and recommend strategic upsells or product/technical fixes.
