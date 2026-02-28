@@ -20,7 +20,8 @@ All the following features are my interpretations of the job requirements listed
 - SQL
 - Python
 - Power Bi
-
+- Vibe Codeed Java Script
+- JPype
 
 
 
