@@ -35,7 +35,7 @@ Resulting sheets include:
 1) Affiliate Network Clickstream (event‑level)  <br>
 click_id / timestamp / affiliate_id / publisher_name / sub_id / device_type / country / landing_page / commission_rate / network_session_id
     >Required to track click‑to‑conversion drop‑off, invalid clicks, partner quality, sub‑ID consistency.
-    ><br>
+    <br>
     
 
 2) Affiliate Network Conversions (network‑reported)  <br>
@@ -53,7 +53,7 @@ order_id / user_id / order_value / payment_status / fraud_flag / product_categor
 4) Tracking Metadata (Snowplow‑style event data)  <br>
 page_view_id / session_id / user_id / event_type (page_view, click, purchase, etc.) / affiliate_click_context (JSON) / device, browser, geo / referrer / sub_id <br>
     >Which allows for rebuilding journeys, detecting broken tracking, validating partner integrity, identify missing or malformed parameters.
-    ><br>
+    <br>
     
 <br>
 
