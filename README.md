@@ -63,7 +63,7 @@ In response to the gathered data, we are wanting to understand general questions
 - Which partners drive high‑value vs. low‑value customers?
 <br>
 
-(Note for WIP: To create a data model which can audit the data, we require a modeled data set to flag for our determined auditing needs.
+(WIP Note: To create a data model which can audit the data, we require a modeled data set to flag for our determined auditing needs.
 Essentially I extract from these initial 4 data sheets, using sql to identify mismatches in the data, then anywhere the data does not validate I want it to return those invalidations to  a new sheet of data)
 
 <br>
