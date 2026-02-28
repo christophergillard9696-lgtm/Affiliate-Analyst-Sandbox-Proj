@@ -39,22 +39,19 @@ click_id / timestamp / affiliate_id / publisher_name / sub_id / device_type / co
 <br>
 <br>
 2) Affiliate Network Conversions (network‑reported)  <br>
-conversion_id / click_id (foreign key) / order_value / commission_amount / currency / conversion_status (approved, pending, declined) / decline_reason / attribution_model / transaction_timestamp
-
+conversion_id / click_id (foreign key) / order_value / commission_amount / currency / conversion_status (approved, pending, declined) / decline_reason / attribution_model / transaction_timestamp <br>
     >Required to detect revenue leakage, over‑ or under‑payment, incorrect CPA rates, missing sub‑IDs.
     
 <br>
 <br>
 3) Internal Orders (source of truth)  <br>
-order_id / user_id / order_value / payment_status / fraud_flag / product_category / order_timestamp / utm_source, utm_medium, utm_campaign / session_id
-
+order_id / user_id / order_value / payment_status / fraud_flag / product_category / order_timestamp / utm_source, utm_medium, utm_campaign / session_id <br>
     >Anchoring for reconciling network vs. internal revenue, identifying untracked affiliate orders, validating decline reasons, building conversion paths.
 
 <br>
 <br>
 4) Tracking Metadata (Snowplow‑style event data)  <br>
-page_view_id / session_id / user_id / event_type (page_view, click, purchase, etc.) / affiliate_click_context (JSON) / device, browser, geo / referrer / sub_id
-
+page_view_id / session_id / user_id / event_type (page_view, click, purchase, etc.) / affiliate_click_context (JSON) / device, browser, geo / referrer / sub_id <br>
     >Which allows for rebuilding journeys, detecting broken tracking, validating partner integrity, identify missing or malformed parameters.
     
 <br>
