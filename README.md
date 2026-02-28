@@ -73,17 +73,17 @@ Acheived through SQL logic parameters
 <br>
 
 Sub‑ID mismatch <br>
-        >CASE WHEN sub_id_click != sub_id_conversion OR sub_id_click != sub_id_internal THEN 'subid_mismatch' END.
+        > CASE WHEN sub_id_click != sub_id_conversion OR sub_id_click != sub_id_internal THEN 'subid_mismatch' END.
         
 <br>
 
 Missing order <br>
-        >CASE WHEN conversion_id IS NOT NULL AND order_id IS NULL THEN 'missing_order' END.
+        > CASE WHEN conversion_id IS NOT NULL AND order_id IS NULL THEN 'missing_order' END.
         
 <br>
 
 Invalid CPA <br>
-        >CASE WHEN commission_amount != order_value_network * cpa_rate THEN 'invalid_cpa' END.
+        > CASE WHEN commission_amount != order_value_network * cpa_rate THEN 'invalid_cpa' END.
 <br>
 
 5) Resulting Table  <br>
