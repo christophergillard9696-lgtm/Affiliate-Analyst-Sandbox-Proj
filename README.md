@@ -28,7 +28,43 @@ All the following features are my interpretations of the job requirements listed
 
 
 # ♟️ The Process:
+Began by gathering three data sources: Affiliate Network Data, Internal Product/Transaction Data, and Tracking Metadata.
 
+Resulting sheets include:
+
+1) Affiliate Network Clickstream (event‑level)
+click_id / timestamp / affiliate_id / publisher_name / sub_id / device_type / country / landing_page / commission_rate / network_session_id
+Required to track click‑to‑conversion drop‑off, invalid clicks, partner quality, sub‑ID consistency.
+
+2) Affiliate Network Conversions (network‑reported)
+conversion_id / click_id (foreign key) / order_value / commission_amount / currency / conversion_status (approved, pending, declined) / decline_reason / attribution_model / transaction_timestamp
+Required to detect revenue leakage, over‑ or under‑payment, incorrect CPA rates, missing sub‑IDs.
+
+3) Internal Orders (source of truth)
+order_id / user_id / order_value / payment_status / fraud_flag / product_category / order_timestamp / utm_source, utm_medium, utm_campaign / session_id
+Anchoring for reconciling network vs. internal revenue, identifying untracked affiliate orders, validating decline reasons, building conversion paths.
+
+4) Tracking Metadata (Snowplow‑style event data)
+page_view_id / session_id / user_id / event_type (page_view, click, purchase, etc.) / affiliate_click_context (JSON) / device, browser, geo / referrer / sub_id
+Which allows for rebuilding journeys, detecting broken tracking, validating partner integrity, identify missing or malformed parameters.
+
+
+In response to the gathered data we are out to understand questions surrounding integrity/performance audits, like: 
+- How many affiliate conversions are missing from internal data? 
+- Which partners have the highest decline rates and why?
+- Where is revenue leakage occurring?
+- Which sub‑IDs are underperforming or mis‑tracking?
+- What is the true CPA vs. what the network is charging?
+- Which partners drive high‑value vs. low‑value customers?
+
+
+To create a data model which can audit the data we require a clean, modeled data set based off our resulting sheets of data.
+
+5) Flagging Data Model
+click_id / network_order_value / internal_order_value /	discrepancy_flag / reason
+
+
+Of which will follow a dashboard tracking these decline rates, revenue leakages, sub-ID performances, conversion funnels, along with a short written report to draw attention to our insights.
 
 
 # 🎬 Preview:
