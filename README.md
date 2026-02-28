@@ -35,19 +35,23 @@ Resulting sheets include:
 1) Affiliate Network Clickstream (event‑level)  <br>
 click_id / timestamp / affiliate_id / publisher_name / sub_id / device_type / country / landing_page / commission_rate / network_session_id
     >Required to track click‑to‑conversion drop‑off, invalid clicks, partner quality, sub‑ID consistency.
-
+<br>
+<br>
 2) Affiliate Network Conversions (network‑reported)  <br>
 conversion_id / click_id (foreign key) / order_value / commission_amount / currency / conversion_status (approved, pending, declined) / decline_reason / attribution_model / transaction_timestamp
     >Required to detect revenue leakage, over‑ or under‑payment, incorrect CPA rates, missing sub‑IDs.
-
+<br>
+<br>
 3) Internal Orders (source of truth)  <br>
 order_id / user_id / order_value / payment_status / fraud_flag / product_category / order_timestamp / utm_source, utm_medium, utm_campaign / session_id
     >Anchoring for reconciling network vs. internal revenue, identifying untracked affiliate orders, validating decline reasons, building conversion paths.
-
+<br>
+<br>
 4) Tracking Metadata (Snowplow‑style event data)  <br>
 page_view_id / session_id / user_id / event_type (page_view, click, purchase, etc.) / affiliate_click_context (JSON) / device, browser, geo / referrer / sub_id
     >Which allows for rebuilding journeys, detecting broken tracking, validating partner integrity, identify missing or malformed parameters.
-
+<br>
+<br>
 
 In response to the gathered data, we are wanting to understand general questions surrounding integrity/performance audits, like: 
 - How many affiliate conversions are missing from internal data? 
