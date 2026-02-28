@@ -41,7 +41,7 @@ click_id / timestamp / affiliate_id / publisher_name / sub_id / device_type / co
 2) Affiliate Network Conversions (network‑reported)  <br>
 conversion_id / click_id (foreign key) / order_value / commission_amount / currency / conversion_status (approved, pending, declined) / decline_reason / attribution_model / transaction_timestamp <br>
     >Required to detect revenue leakage, over‑ or under‑payment, incorrect CPA rates, missing sub‑IDs.
-    ><br>
+    <br>
     
 
 3) Internal Orders (source of truth)  <br>
@@ -72,6 +72,7 @@ To create a data model which can audit the data we require a clean, modeled data
 click_id / network_order_value / internal_order_value /	discrepancy_flag / reason <br>
 >Data Model to flag for defined audit parameters.
 
+<br>
 <br>
 
 Of which will follow a dashboard tracking these decline rates, revenue leakages, sub-ID performances, conversion funnels, along with a short written report to draw attention to our findings.
