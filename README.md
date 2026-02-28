@@ -22,6 +22,8 @@ All the following features are my interpretations of the job requirements listed
 - Power Bi
 - Vibe Codeed Java Script
 - JPype
+- JSON
+- Pandas
 
 
 
