@@ -64,11 +64,10 @@ In response to the gathered data, we are wanting to understand general questions
 - Which partners drive high‑value vs. low‑value customers?
 
 
-To create a data model which can audit the data we require a clean, modeled data set based off our resulting sheets of data.
+To create a data model which can audit the data we require a clean, modeled data set based off our resulting sheets of data:
 
 5) Flagging Data Model  <br>
 click_id / network_order_value / internal_order_value /	discrepancy_flag / reason <br>
->Data Model to flag for defined audit parameters.
 
 <br>
 <br>
