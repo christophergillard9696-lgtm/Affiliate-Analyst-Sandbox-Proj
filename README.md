@@ -86,6 +86,27 @@ Invalid CPA <br>
         > CASE WHEN commission_amount != order_value_network * cpa_rate THEN 'invalid_cpa' END.
 <br>
 
+
+Missing required fields <br>
+> SELECT *, 'missing_required_fields' AS error_type FROM stg_clicks WHERE click_id IS NULL OR affiliate_id IS NULL;
+<br>
+
+Foreign Key Mismatch <br>
+> SELECT c.*, 'unknown_affiliate' AS error_type FROM stg_clicks c LEFT JOIN stg_affiliates a ON c.affiliate_id = a.affiliate_id WHERE a.affiliate_id IS NULL;
+<br>
+
+Invalid data Logic <br>
+SELECT conv.*, 'conversion_before_click' AS error_type FROM stg_conversions conv JOIN stg_clicks clk ON conv.click_id = clk.click_id WHERE conv.conversion_time < clk.click_time;
+<br>
+
+Some kind of Union to put all invalidations into one table: 
+SELECT * FROM validation_missing_required_fields UNION ALL SELECT * FROM validation_unknown_affiliate UNION ALL SELECT * FROM validation_conversion_before_click;
+<br>
+
+???row_id	field1	field2	…	error_type???
+
+
+
 5) Error Report  <br>
 click_id / network_order_value / internal_order_value /	discrepancy_flag / reason <br>
 
