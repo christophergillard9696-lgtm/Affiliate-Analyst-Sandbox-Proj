@@ -68,14 +68,14 @@ To create a data model which can audit the data, we require a modeled data set t
 <br>
 Acheived through SQL logic parameters
 <br>
-Sub‑ID mismatch
->CASE WHEN sub_id_click != sub_id_conversion OR sub_id_click != sub_id_internal THEN 'subid_mismatch' END
+Sub‑ID mismatch <br>
+        >CASE WHEN sub_id_click != sub_id_conversion OR sub_id_click != sub_id_internal THEN 'subid_mismatch' END
 <br>
-Missing order
->CASE WHEN conversion_id IS NOT NULL AND order_id IS NULL THEN 'missing_order' END
+Missing order <br>
+        >CASE WHEN conversion_id IS NOT NULL AND order_id IS NULL THEN 'missing_order' END
 <br>
-Invalid CPA
->CASE WHEN commission_amount != order_value_network * cpa_rate THEN 'invalid_cpa' END
+Invalid CPA <br>
+        >CASE WHEN commission_amount != order_value_network * cpa_rate THEN 'invalid_cpa' END
 <br>
 
 5) Resulting Table  <br>
