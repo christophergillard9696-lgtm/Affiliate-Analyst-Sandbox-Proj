@@ -54,7 +54,6 @@ page_view_id / session_id / user_id / event_type (page_view, click, purchase, et
     >Which allows for rebuilding journeys, detecting broken tracking, validating partner integrity, identify missing or malformed parameters.
     <br>
     
-<br>
 
 In response to the gathered data, we are wanting to understand general questions surrounding integrity/performance audits, like: 
 - How many affiliate conversions are missing from internal data? 
