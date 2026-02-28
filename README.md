@@ -72,6 +72,7 @@ To create a data model which can audit the data we require a clean, modeled data
 click_id / network_order_value / internal_order_value /	discrepancy_flag / reason <br>
 >Data Model to flag for defined audit parameters.
 
+<br>
 
 Of which will follow a dashboard tracking these decline rates, revenue leakages, sub-ID performances, conversion funnels, along with a short written report to draw attention to our findings.
 
