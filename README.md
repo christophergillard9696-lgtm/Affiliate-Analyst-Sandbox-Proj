@@ -69,7 +69,7 @@ In response to the gathered data, we are wanting to understand general questions
 To create a data model which can audit the data we require a clean, modeled data set based off our resulting sheets of data.
 
 5) Flagging Data Model  <br>
-click_id / network_order_value / internal_order_value /	discrepancy_flag / reason
+click_id / network_order_value / internal_order_value /	discrepancy_flag / reason <br>
 
 
 Of which will follow a dashboard tracking these decline rates, revenue leakages, sub-ID performances, conversion funnels, along with a short written report to draw attention to our findings.
