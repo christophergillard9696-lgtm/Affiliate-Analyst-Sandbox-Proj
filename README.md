@@ -73,31 +73,37 @@ Acheived through SQL logic parameters:
 <br>
 
 Sub‑ID mismatch <br>
-        > CASE WHEN sub_id_click != sub_id_conversion OR sub_id_click != sub_id_internal THEN 'subid_mismatch' END.
+       CASE WHEN sub_id_click != sub_id_conversion OR sub_id_click != sub_id_internal THEN 'subid_mismatch' END.
         
 <br>
 
 Missing order <br>
-        > CASE WHEN conversion_id IS NOT NULL AND order_id IS NULL THEN 'missing_order' END.
+        CASE WHEN conversion_id IS NOT NULL AND order_id IS NULL THEN 'missing_order' END.
         
 <br>
 
 Invalid CPA <br>
-        > CASE WHEN commission_amount != order_value_network * cpa_rate THEN 'invalid_cpa' END.
+        CASE WHEN commission_amount != order_value_network * cpa_rate THEN 'invalid_cpa' END.
 <br>
 
 
 Missing required fields <br>
-> SELECT *, 'missing_required_fields' AS error_type FROM stg_clicks WHERE click_id IS NULL OR affiliate_id IS NULL;
+SELECT *, 'missing_required_fields' AS error_type FROM stg_clicks WHERE click_id IS NULL OR affiliate_id IS NULL;
 <br>
 
 Foreign Key Mismatch <br>
-> SELECT c.*, 'unknown_affiliate' AS error_type FROM stg_clicks c LEFT JOIN stg_affiliates a ON c.affiliate_id = a.affiliate_id WHERE a.affiliate_id IS NULL;
+SELECT c.*, 'unknown_affiliate' AS error_type FROM stg_clicks c LEFT JOIN stg_affiliates a ON c.affiliate_id = a.affiliate_id WHERE a.affiliate_id IS NULL;
 <br>
 
 Invalid data Logic <br>
 SELECT conv.*, 'conversion_before_click' AS error_type FROM stg_conversions conv JOIN stg_clicks clk ON conv.click_id = clk.click_id WHERE conv.conversion_time < clk.click_time;
 <br>
+
+Arithmetic validation for Comission Payout <br>
+SELECT c.conversion_id, c.affiliate_id, c.sale_amount, a.commission_rate, c.payout AS reported_payout, (c.sale_amount * a.commission_rate) AS expected_payout, 'payout_mismatch' AS error_type FROM stg_conversions c JOIN stg_affiliates a ON c.affiliate_id = a.affiliate_id WHERE ROUND(c.payout, 2) <> ROUND(c.sale_amount * a.commission_rate, 2);
+
+<br>
+
 
 Some kind of Union to put all invalidations into one table: 
 SELECT * FROM validation_missing_required_fields UNION ALL SELECT * FROM validation_unknown_affiliate UNION ALL SELECT * FROM validation_conversion_before_click;
