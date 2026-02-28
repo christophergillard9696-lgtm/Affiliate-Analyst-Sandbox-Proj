@@ -86,7 +86,7 @@ Invalid CPA <br>
         > CASE WHEN commission_amount != order_value_network * cpa_rate THEN 'invalid_cpa' END.
 <br>
 
-5) Resulting Table  <br>
+5) Error Report  <br>
 click_id / network_order_value / internal_order_value /	discrepancy_flag / reason <br>
 
 <br>
