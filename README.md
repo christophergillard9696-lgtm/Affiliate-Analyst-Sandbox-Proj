@@ -65,15 +65,23 @@ In response to the gathered data, we are wanting to understand general questions
 
 To create a data model which can audit the data, we require a modeled data set to flag for our determined auditing needs:
 (Note for WIP: essentially I extract these initial 4 data sheets, then use sql to validate the data, then anywhere the data does not validate I want it to return those invalidations to which a new sheet is created for my report)
+
 <br>
+
 Acheived through SQL logic parameters
+
 <br>
+
 Sub‑ID mismatch <br>
         >CASE WHEN sub_id_click != sub_id_conversion OR sub_id_click != sub_id_internal THEN 'subid_mismatch' END
+        
 <br>
+
 Missing order <br>
         >CASE WHEN conversion_id IS NOT NULL AND order_id IS NULL THEN 'missing_order' END
+        
 <br>
+
 Invalid CPA <br>
         >CASE WHEN commission_amount != order_value_network * cpa_rate THEN 'invalid_cpa' END
 <br>
