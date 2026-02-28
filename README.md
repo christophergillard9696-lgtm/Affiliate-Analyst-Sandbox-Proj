@@ -43,11 +43,10 @@ conversion_id / click_id (foreign key) / order_value / commission_amount / curre
     >Required to detect revenue leakage, over‑ or under‑payment, incorrect CPA rates, missing sub‑IDs.
     <br>
     
-
 3) Internal Orders (source of truth)  <br>
 order_id / user_id / order_value / payment_status / fraud_flag / product_category / order_timestamp / utm_source, utm_medium, utm_campaign / session_id <br>
     >Anchoring for reconciling network vs. internal revenue, identifying untracked affiliate orders, validating decline reasons, building conversion paths.
-    ><br>
+    <br>
 
 
 4) Tracking Metadata (Snowplow‑style event data)  <br>
