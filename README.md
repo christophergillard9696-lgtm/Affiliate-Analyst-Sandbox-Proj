@@ -90,6 +90,8 @@ Invalid CPA <br>
 click_id / network_order_value / internal_order_value /	discrepancy_flag / reason <br>
 
 <br>
+<br>
+<br>
 Of which will follow a dashboard tracking these decline rates, revenue leakages, sub-ID performances, conversion funnels, along with a short written report to draw attention to our findings.
 
 
