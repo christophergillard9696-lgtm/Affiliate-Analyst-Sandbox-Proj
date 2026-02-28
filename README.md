@@ -20,7 +20,6 @@ IThis project sets out to create an ETL and data dashboard that can:
 - SQL SnowFlake
 - Python
 - Power Bi
-- Vibe Codeed Java Script
 - JPype
 - JSON
 - Pandas
