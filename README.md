@@ -109,7 +109,7 @@ SELECT c.conversion_id, c.affiliate_id, c.sale_amount, a.commission_rate, c.payo
 <br>
 
 
-Some kind of Union to put all invalidations into one table: 
+Stacking all invalidations into one table: 
 SELECT * FROM validation_missing_required_fields UNION ALL SELECT * FROM validation_unknown_affiliate UNION ALL SELECT * FROM validation_conversion_before_click;
 <br>
 
