@@ -63,6 +63,9 @@ In response to the gathered data, we are wanting to understand general questions
 - Which partners drive high‑value vs. low‑value customers?
 <br>
 
+5) Error Report  <br>
+click_id / network_order_value / internal_order_value /	discrepancy_flag / reason <br>
+
 (W.I.P Note: To create a data model which can audit the data, we require a modeled data set to flag for our determined auditing needs.
 Essentially I extract from these initial 4 data sheets, using sql to identify mismatches in the data, then anywhere the data does not validate I want it to return those invalidations to  a new sheet of data)
 
@@ -114,8 +117,7 @@ SELECT * FROM validation_missing_required_fields UNION ALL SELECT * FROM validat
 
 
 
-5) Error Report  <br>
-click_id / network_order_value / internal_order_value /	discrepancy_flag / reason <br>
+
 
 <br>
 <br>
