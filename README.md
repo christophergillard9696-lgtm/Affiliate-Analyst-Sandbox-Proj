@@ -15,7 +15,7 @@ IThis project sets out to create an ETL and data dashboard that can:
 
 
 # 🔩 Technologies:
-- Event-level analytics platforms (e.g., Snowplow, GA360/BigQuery, Adobe Analytics)
+- Event-level analytics platforms (e.g, Snowplow, GA360/BigQuery, Adobe Analytics)
 - Excel/Sheets
 - SQL SnowFlake
 - Python
