@@ -128,8 +128,13 @@ Of which will follow a dashboard tracking these decline rates, revenue leakages,
 
 # 🎬 Preview:
 
+Data Gathered through SnowPlow:
+<img width="1914" height="760" alt="db" src="https://github.com/user-attachments/assets/bb10668a-70a5-4809-af1b-41309924c990" />
+
+- Before and after SQL cleanup for condition fail data, left sheet shows original set of data with fails removed, then the discrepency data set highlighting the failures.
 
 # 👁️‍🗨️ Insights:
+
 -
 -
 -
