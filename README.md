@@ -142,7 +142,7 @@ Data Gathered through SnowPlow:
 
 # 👁️‍🗨️ Insights:
 
-- 
+- (W.I.P note: remember to show where things are breaking and where they're working)
 -
 -
 -
