@@ -142,7 +142,7 @@ Data Gathered through SnowPlow:
 
 # 👁️‍🗨️ Insights:
 
-- (W.I.P note: hopw are we translating this into power bi? ID to name attributes, Flagging email system, pay out pile up)
+- (W.I.P note: how are we translating this into power bi? ID to name attributes, Flagging email system, pay out pile up)
 -
 -
 -
